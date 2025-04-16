@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Attendance Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+      background-color: #f9f9f9;
+    }
+    h2 {
+      color: #333;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      max-width: 400px;
+    }
+    input[type="text"], input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h2>Student Attendance Form</h2>
+  <form action="http://localhost:5000/attendance/submit" method="POST">
+    <label for="student_id">Student ID:</label><br>
+    <input type="text" id="student_id" name="student_id" required><br>
+
+    <label for="session_id">Session ID:</label><br>
+    <input type="text" id="session_id" name="session_id" required><br>
+
+    <input type="submit" value="Submit Attendance">
+  </form>
+</body>
+</html>
